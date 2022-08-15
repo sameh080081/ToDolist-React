@@ -1,36 +1,31 @@
-import React, { useState } from "react"
+import React, { useState } from 'react';
 
-import { NavLink } from "react-router-dom"
+import { NavLink } from 'react-router-dom';
 
 import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
 
 
 const Navbar = () => {
-
-  const [navbarOpen, setNavbarOpen] = useState(false)
-
+  const [navbarOpen, setNavbarOpen] = useState(false);
   const links = [
     {
       id: 1,
-      path: "/",
-      text: "Home",
+      path: '/',
+      text: 'Home',
     }, 
     {
       id: 2,
-      path: "/about",
-      text: "About",
+      path: '/about',
+      text: 'About',
     }
-  ]
-
+  ];
   const handleToggle = () => {
-    setNavbarOpen(!navbarOpen)
+    setNavbarOpen(!navbarOpen);
   }
-
   const closeMenu = () => {
-    setNavbarOpen(false)
+    setNavbarOpen(false);
   }
-
   return (
     <nav className="navBar">
       <button onClick={handleToggle}>
@@ -61,6 +56,6 @@ const Navbar = () => {
         })}
       </ul>
     </nav>
-  )  
+  );
 }
-export default Navbar
+export default Navbar;

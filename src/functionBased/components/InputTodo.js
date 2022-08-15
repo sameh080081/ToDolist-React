@@ -1,18 +1,16 @@
-import React, { useState } from "react"
-import { FaPlusCircle } from "react-icons/fa";
+import React, { useState } from 'react';
+import { FaPlusCircle } from 'react-icons/fa';
 
 const InputTodo = (props) => {
   const [inputText, setInputText] = useState({
-    title: "",
-  })
-
+    title: '',
+  });
   const onChange = e => {
     setInputText({
       ...inputText,
       [e.target.name]: e.target.value,
-    })
+    });
   }
-
   const handleSubmit = e => {
     e.preventDefault();
     if(inputText.title.trim()) {
@@ -21,7 +19,7 @@ const InputTodo = (props) => {
         title: "",
       })
     } else {
-      alert("Please write item")
+      alert('Please write item')
     } 
   };
 
@@ -39,7 +37,7 @@ const InputTodo = (props) => {
         <FaPlusCircle style={{ color: "darkcyan", fontSize: "20px", marginTop: "2px" }}/>
       </button>
     </form>
-  )
+  );
 }
 
-export default InputTodo
+export default InputTodo;
