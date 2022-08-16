@@ -43,20 +43,20 @@ const TodoItem = (props) => {
         <input
           type="checkbox"
           className={styles.checkbox}
-          checked={completed}  
+          checked={completed}
           onChange={() => props.handleChangeProps(id)}
         />
-        <button onClick={() => props.deleteTodoProps(id)}>
-          <FaTrash style={{color: "orangered", fontSize: "16px"}}/>
+        <button type="button" onClick={() => props.deleteTodoProps(id)}>
+          <FaTrash style={{ color: 'orangered', fontSize: '16px' }}/>
         </button>
-        <span style={completed ? completedStyle : null} >{title}</span>
+        <span style={completed ? completedStyle : null}>{title}</span>
       </div>
       <input
         type="text"
         style={editMode}
-        className={styles.textInput} 
+        className={styles.textInput}
         value={title}
-        onChange={ (e)=> {props.setUpdate(e.target.value, id)} }
+        onChange={ (e)=> { props.setUpdate(e.target.value, id) }}
         onKeyDown={handleUpdatedDone}
       />
     </li>
