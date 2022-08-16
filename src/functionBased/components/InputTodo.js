@@ -16,7 +16,7 @@ const InputTodo = (props) => {
     if(inputText.title.trim()) {
       props.addTodoProps(inputText.title);
       setInputText({
-        title: "",
+        title: '',
       })
     } else {
       alert('Please write item')
@@ -24,17 +24,17 @@ const InputTodo = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form-container">
+    <form onSubmit={handleSubmit} className='form-container'>
       <input
-        type="text"
-        className="input-text"
-        placeholder="Add todo..."
+        type='text'
+        className='input-text'
+        placeholder='Add todo...'
         value={inputText.title}
-        name="title"          
+        name='title'
         onChange={onChange}
       />
-      <button className="input-submit">
-        <FaPlusCircle style={{ color: "darkcyan", fontSize: "20px", marginTop: "2px" }}/>
+      <button className='input-submit'>
+        <FaPlusCircle style={{ color: 'darkcyan', fontSize: '20px', marginTop: '2px' }}/>
       </button>
     </form>
   );

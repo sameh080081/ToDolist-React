@@ -16,7 +16,7 @@ const TodoContainer = () => {
     localStorage.setItem("todos", temp);
   }, [todos]);
   function getInitialTodos() {
-    const temp = localStorage.getItem("todos");
+    const temp = localStorage.getItem('todos');
     const savedTodos = JSON.parse(temp);
     return savedTodos || [] ;
   }
@@ -60,9 +60,9 @@ const TodoContainer = () => {
     <>
       <Navbar />
       <Switch>
-        <Route exact path="/">
-          <div className="container">
-            <div className="inner">
+        <Route exact path='/'>
+          <div className='container'>
+            <div className='inner'>
               <Header />
               <InputTodo addTodoProps={addTodoItem} />
               <TodosList 
@@ -74,10 +74,10 @@ const TodoContainer = () => {
             </div>
           </div>
         </Route>
-        <Route path= "/about">
+        <Route path= '/about'>
           <About />
         </Route>
-        <Route path="*">
+        <Route path='*'>
           <NotMatch />
         </Route>
       </Switch>

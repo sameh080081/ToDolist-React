@@ -27,25 +27,25 @@ const Navbar = () => {
     setNavbarOpen(false);
   }
   return (
-    <nav className="navBar">
+    <nav className='navBar'>
       <button onClick={handleToggle}>
         {
           navbarOpen ? 
           <MdClose 
-            style={{color: "#fff", width: "40px", height: "40px" }} 
+            style={{color: '#fff', width: '40px', height: '40px' }} 
           /> : 
           <FiMenu 
-            style={{color: "#7b7b7b", width: "40px", height: "40px" }} 
+            style={{color: '#7b7b7b', width: '40px', height: '40px' }} 
           />
         }
       </button>
-      <ul className={`menuNav ${navbarOpen ? " showMenu": ""}`}>
+      <ul className={`menuNav ${navbarOpen ? 'showMenu': ''}`}>
         {links.map((link) => {
           return (
             <li key={link.id}>
               <NavLink 
                 to={link.path} 
-                activeClassName="active-link"
+                activeClassName='active-link'
                 onClick={() => closeMenu()}
                 exact
               >

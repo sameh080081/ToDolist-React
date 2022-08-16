@@ -6,7 +6,7 @@ const TodoItem = (props) => {
   const [editing, setEditing] = useState(false);
   useEffect(() => {
     return () => {
-      console.log("Cleaning up...");
+      console.log('Cleaning up...');
     }
   }, [])
 
@@ -15,7 +15,7 @@ const TodoItem = (props) => {
   } 
 
   const handleUpdatedDone = (event) => {
-    if (event.key === "Enter" ) {
+    if (event.key === 'Enter' ) {
       setEditing(false);
     }
   }
@@ -42,18 +42,18 @@ const TodoItem = (props) => {
     <li className={styles.item}>
       <div onDoubleClick={handleEditing} style={viewMode}>
         <input 
-          type="checkbox" 
+          type='checkbox'
           className={styles.checkbox}
           checked={completed}  
           onChange={() => props.handleChangeProps(id)}
         />
         <button onClick={() => props.deleteTodoProps(id)}>
-          <FaTrash style={{color: "orangered", fontSize: "16px"}}/>
+          <FaTrash style={{color: 'orangered', fontSize: '16px'}}/>
         </button>
         <span style={completed ? completedStyle : null} >{title}</span>
       </div>
       <input 
-        type="text" 
+        type='text' 
         style={editMode} 
         className={styles.textInput} 
         value={title} 
