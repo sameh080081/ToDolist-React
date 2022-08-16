@@ -39,11 +39,12 @@ const Navbar = () => {
                 style={
                   { color: '#7b7b7b', width: '40px', height: '40px' }
                 }
-              />)
+            />)
         }
       </button>
       <ul className={`menuNav ${navbarOpen ? 'showMenu' : ''}`}>
-        {links.map((link) => { return (
+        {links.map((link) => {
+          return (
             <li key={link.id}>
               <NavLink
                 to={link.path}
@@ -54,7 +55,7 @@ const Navbar = () => {
                 {link.text}
               </NavLink>
             </li>
-        );}
+        ); },
         )};
       </ul>
     </nav>

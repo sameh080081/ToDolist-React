@@ -38,14 +38,15 @@ const TodoContainer = () => {
       }),
     ]);
   };
-  const addTodoItem = (title) => {
-    const newTodo = {    
-      id: uuidv4(),    
-      title: title,
-      completed: false
+  const addTodoItem = (titlev) => {
+    const newTodo = {   
+      id: uuidv4(),
+      title: titlev,
+      completed: false,
     };
     setTodos([...todos, newTodo]);
   };
+  /* eslint-disable no-param-reassign */
   const setUpdate = (updatedTitle, id) => {
     setTodos(
       todos.map((todo) => {
@@ -56,6 +57,7 @@ const TodoContainer = () => {
       }),
     );
   };
+  /* eslint-disable no-param-reassign */
 
   return (
     <>
