@@ -30,16 +30,16 @@ const Navbar = () => {
       <button type="button" onClick={handleToggle}>
         {
           navbarOpen
-            ? (
-            <MdClose
+            ?
+              (<MdClose
                 style={
                   { color: '#fff', width: '40px', height: '40px' }
                 }
             />)
-            : (
-            <FiMenu
+            :
+              (<FiMenu
                 style={
-                  {color: '#7b7b7b', width: '40px', height: '40px' }
+                  { color: '#7b7b7b', width: '40px', height: '40px' }
                 }
               />)
         }
@@ -56,9 +56,8 @@ const Navbar = () => {
                 {link.text}
               </NavLink>
             </li>
-        );
-        })
-        };
+        );}
+        )};
       </ul>
     </nav>
   );
