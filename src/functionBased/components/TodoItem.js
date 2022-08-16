@@ -4,8 +4,8 @@ import styles from './TodoItem.module.css';
 
 const TodoItem = (props) => {
   const [editing, setEditing] = useState(false);
-  useEffect(() => { return () => {
-      console.log('Cleaning up...');
+  useEffect(() => {
+    return () => { console.log('Cleaning up...');
     };
   }, []);
 
@@ -14,10 +14,10 @@ const TodoItem = (props) => {
   };
 
   const handleUpdatedDone = (event) => {
-    if (event.key === 'Enter' ) {
+    if (event.key === 'Enter') {
       setEditing(false);
     }
-  }
+  };
 
   const completedStyle = {
     fontStyle: 'italic',
@@ -25,7 +25,7 @@ const TodoItem = (props) => {
     opacity: 0.4,
     textDecoration: 'line-through',
   };
-
+  /* eslint-disable react/prop-types */
   const { completed, id, title } = props.todo;
 
   const viewMode = {};
@@ -51,12 +51,12 @@ const TodoItem = (props) => {
         </button>
         <span style={completed ? completedStyle : null} >{title}</span>
       </div>
-      <input 
+      <input
         type="text"
-        style={editMode} 
+        style={editMode}
         className={styles.textInput} 
-        value={title} 
-        onChange={(e)=> {props.setUpdate(e.target.value, id)}}
+        value={title}
+        onChange={ (e)=> {props.setUpdate(e.target.value, id)} }
         onKeyDown={handleUpdatedDone}
       />
     </li>
