@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoItem from './TodoItem';
-
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 const TodosList = (props) => {
   return (
     <ul>
