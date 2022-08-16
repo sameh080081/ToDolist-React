@@ -1,4 +1,4 @@
-/* eslint no-use-before-define: 2 */  // --> ON
+/* eslint-disable no-use-before-define */
 import React, { useState } from 'react';
 
 import { NavLink } from 'react-router-dom';
