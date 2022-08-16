@@ -14,7 +14,7 @@ const InputTodo = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputText.title.trim()) {
-      /* eslint-disable react/prop-types react/destructuring-assignment */
+      /* eslint-disable react/prop-types */
       const prop = props.addTodoProps;
       prop(inputText.title);
       setInputText({
