@@ -4,10 +4,9 @@ import styles from './TodoItem.module.css';
 
 const TodoItem = (props) => {
   const [editing, setEditing] = useState(false);
-  useEffect(() => {
-    return () => { console.log('Cleaning up...');
-    };
-  }, []);
+  useEffect(() => (
+    console.log('Cleaning up...')
+  ), []);
 
   const handleEditing = () => {
     setEditing(true);
@@ -27,7 +26,6 @@ const TodoItem = (props) => {
   };
   /* eslint-disable react/prop-types */
   const { completed, id, title } = props.todo;
-
   const viewMode = {};
   const editMode = {};
 
