@@ -14,7 +14,7 @@ const Header = () => {
         }
       }
       >
-        todos</h1>
+      todos</h1>
     </header>
   );
 };
