@@ -15,8 +15,8 @@ const InputTodo = (props) => {
     e.preventDefault();
     if (inputText.title.trim()) {
       /* eslint-disable react/prop-types */
-      const { props: { addTodoProps } } = props;
-      addTodoProps(inputText.title);
+      const prop = props.addTodoProps;
+      prop(inputText.title);
       setInputText({
         title: '',
       });
