@@ -24,6 +24,7 @@ const TodoItem = (props) => {
     opacity: 0.4,
     textDecoration: 'line-through',
   };
+  /* eslint-disable react/prop-types */
   /* eslint-disable react/destructuring-assignment */
   const { completed, id, title } = props.todo;
   const viewMode = {};
