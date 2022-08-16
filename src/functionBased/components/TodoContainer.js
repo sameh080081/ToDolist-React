@@ -33,13 +33,11 @@ const TodoContainer = () => {
   };
   const delTodo = (id) => {
     setTodos([
-      ...todos.filter((todo) => {
-        return todo.id !== id;
-      }),
+      ...todos.filter((todo) =>  todo.id !== id ),
     ]);
   };
   const addTodoItem = (titlev) => {
-    const newTodo = {   
+    const newTodo = {
       id: uuidv4(),
       title: titlev,
       completed: false,

@@ -30,8 +30,8 @@ const Navbar = () => {
       <button type="button" onClick={handleToggle}>
         {
           navbarOpen
-            ?(<MdClose
-                style={
+            ? 
+              (<MdClose style={
                   { color: '#fff', width: '40px', height: '40px' }
                 }
             />)
