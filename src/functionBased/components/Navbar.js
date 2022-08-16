@@ -31,14 +31,8 @@ const Navbar = () => {
       <button type="button" onClick={handleToggle}>
         {
           navbarOpen
-            ? <MdClose style={(
-                  { color: '#fff', width: '40px', height: '40px' }
-            )}
-            />
-            : <FiMenu style={(
-                  { color: '#7b7b7b', width: '40px', height: '40px' }
-              )}
-            />
+            ? <MdClose style={{ color: '#fff', width: '40px', height: '40px' }}/>
+            : <FiMenu style={{ color: '#7b7b7b', width: '40px', height: '40px' }}/>
         }
       </button>
       <ul className={`menuNav ${navbarOpen ? 'showMenu' : ''}`}>
@@ -52,8 +46,8 @@ const Navbar = () => {
             >
               {link.text}
             </NavLink>
-          </li>)
-        )};
+          </li>),)
+        };
       </ul>
     </nav>
   );
