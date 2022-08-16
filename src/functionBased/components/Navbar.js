@@ -36,8 +36,8 @@ const Navbar = () => {
         }
       </button>
       <ul className={`menuNav ${navbarOpen ? 'showMenu' : ''}`}>
-        {links.map((link) => (
-          <li key={link.id}>
+        {links.map((link) => 
+          (<li key={link.id}>
             <NavLink
               to={link.path}
               activeClassName="active-link"
@@ -46,8 +46,8 @@ const Navbar = () => {
             >
               {link.text}
             </NavLink>
-          </li>))
-        };
+          </li>))}
+        ;
       </ul>
     </nav>
   );
