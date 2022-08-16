@@ -1,3 +1,4 @@
+/* eslint no-use-before-define: 0 */  // --> OFF
 import React, { useState } from 'react';
 
 import { NavLink } from 'react-router-dom';
