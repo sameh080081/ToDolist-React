@@ -33,10 +33,9 @@ const Navbar = () => {
           navbarOpen
             ? <MdClose style={(
                   { color: '#fff', width: '40px', height: '40px' }
-              )}
+            )}
             />
-            : <FiMenu
-                style={(
+            : <FiMenu style={(
                   { color: '#7b7b7b', width: '40px', height: '40px' }
               )}
             />
@@ -44,18 +43,17 @@ const Navbar = () => {
       </button>
       <ul className={`menuNav ${navbarOpen ? 'showMenu' : ''}`}>
         {links.map((link) => (
-            <li key={link.id}>
-              <NavLink
-                to={link.path}
-                activeClassName="active-link"
-                onClick={() => closeMenu()}
-                exact
-              >
-                {link.text}
-              </NavLink>
-            </li>
-          )
-        ,)};
+          <li key={link.id}>
+            <NavLink
+              to={link.path}
+              activeClassName="active-link"
+              onClick={() => closeMenu()}
+              exact
+            >
+              {link.text}
+            </NavLink>
+          </li>)
+        )};
       </ul>
     </nav>
   );
