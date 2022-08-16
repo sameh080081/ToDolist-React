@@ -9,8 +9,11 @@ const Header = () => {
   return (
     <header style={headerStyle}>
       <h1 style={
-        { fontSize: '6rem', fontWeight: '600', marginBottom: '2rem', lineHeight: '1em', color: '#ececec', textTransform: 'lowercase', textAlign: 'center' }
-        }>todos</h1>
+        {
+          fontSize: '6rem', fontWeight: '600', marginBottom: '2rem', lineHeight: '1em', color: '#ececec', textTransform: 'lowercase', textAlign: 'center'
+        }
+        }>
+          todos</h1>
     </header>
   );
 };

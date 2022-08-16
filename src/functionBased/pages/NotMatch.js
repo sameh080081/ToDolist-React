@@ -6,6 +6,5 @@ const NotMatch = () => { return (
         No match for this page
       </h3>
     </div>
-  );
-};
+  )};
 export default NotMatch;
