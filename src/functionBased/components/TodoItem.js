@@ -24,7 +24,7 @@ const TodoItem = (props) => {
     opacity: 0.4,
     textDecoration: 'line-through',
   };
-  /* eslint-disable react/prop-types */
+  /* eslint-disable react/destructuring-assignment */
   const { completed, id, title } = props.todo;
   const viewMode = {};
   const editMode = {};
@@ -45,7 +45,7 @@ const TodoItem = (props) => {
           onChange={() => props.handleChangeProps(id)}
         />
         <button type="button" onClick={() => props.deleteTodoProps(id)}>
-          <FaTrash style={{ color: 'orangered', fontSize: '16px' }}/>
+          <FaTrash style={{ color: 'orangered', fontSize: '16px' }} />
         </button>
         <span style={completed ? completedStyle : null}>{title}</span>
       </div>
@@ -54,7 +54,7 @@ const TodoItem = (props) => {
         style={editMode}
         className={styles.textInput}
         value={title}
-        onChange={(e) => { props.setUpdate(e.target.value, id) }}
+        onChange={(e) => { props.setUpdate(e.target.value, id); }}
         onKeyDown={handleUpdatedDone}
       />
     </li>
